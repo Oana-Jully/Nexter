@@ -1,0 +1,139 @@
+.sidebar {
+    background-color: $color-primary;
+    grid-row: 1 / -1;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: all .5s;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 60px;
+    position: relative;
+   
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+        align-items: center;
+}
+
+}
+.navigation__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 0;
+    background-image: linear-gradient(#e0ae70, $color-primary-dark);
+    height: 100vh;
+    z-index: 100;
+    display: block;
+    transition: all .4s;
+    overflow-x: hidden;
+
+    @media (max-width: $bp-large) {
+      right: 0; 
+      left: unset;
+    }
+}
+
+.navigation__list {
+    display: block;
+    transform: translateX(0);
+    margin-top: 100px;
+    transition: all .5s;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.navigation__item {
+    margin-bottom: 1rem;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem;
+}
+
+.nav-btn {
+    border: none;  
+    border-radius: 0; 
+    height: 60px;
+    width: 4.5rem;
+    margin-top: 4rem;
+    display: inline-block;
+
+    span {
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        margin-top: -2.5rem;
+        margin-right: 3rem;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    display: block;
+    height: 60px;
+    width: 4.5rem;
+
+    span {
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        display: block;
+        transition: all .5s;
+        position: relative;
+        top: 45px;
+        right: 15px;
+    }
+
+    .span__1 {
+        transform: rotate(135deg);
+        position: absolute;
+    }
+
+    .span__2 {
+        background-color: transparent;
+    }
+    .span__3 {
+        transform: rotate(-135deg);
+        position: absolute;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+
+
+    }
+}
+
+// @media only screen and (max-width: $bp-medium) {
+//     &::before { transform: translateY(-1.5rem); }
+//     &::after { transform: translateY(1.3rem); }
+
+// }
+
+
+        // &::before { transform: translateY(-1.2rem); }
+        // &::after { transform: translateY(0rem); }
+
+
+.backdrop {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    transition: all .5s;
+}

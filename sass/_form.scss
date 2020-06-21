@@ -1,0 +1,113 @@
+.homes__form {
+    display: none;
+    height: 100vh;
+    width: 50vw;
+    z-index: 100;
+    top: 0;
+    position: fixed;
+    background-color: #fff;
+    border-top: 10px solid #c69963;
+    margin: auto;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+
+    .close-btn span {
+        background-color: $color-secondary;
+    }
+    .close-btn .span__2 {
+        display: none;
+        }
+    
+}
+
+.form {
+    padding: 80px 120px; 
+
+input,
+label,
+textarea {
+    display: block;
+    width: 100%; 
+    font-size: 18px;
+    line-height: 24pt;
+    color: $color-secondary;
+}
+
+input,
+textarea {
+    border: 1px solid rgba(0,0,0,.2);
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #6bd4b1;
+}
+
+
+textarea {
+        resize: none;
+    }
+
+button {
+        display: block;
+        margin: 50px auto 0;
+        padding: 0 20px;
+        border: none;
+        background: #c69963;   
+        color: #fff;
+        letter-spacing: 2px;
+        transition: .1s all ease-in-out;
+        border-bottom: 2px solid transparent;
+        outline: none;
+        padding: 1.5rem 5rem;
+        text-transform: uppercase;
+
+        &:hover {
+            background: inherit;
+            color: #c69963;
+            border-bottom: 2px solid #c69963;
+            box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+        }
+    }
+}
+
+.animate-form {
+    display: block;
+    opacity: 1;
+    perspective: 650px;
+    animation: fadeIn .4s forwards;
+} 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-close-form {
+    opacity: 1;
+    perspective: 650px;
+    animation: fadeOut .4s forwards;
+}
+
+@keyframes fadeOut {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
